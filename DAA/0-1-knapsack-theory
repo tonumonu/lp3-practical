@@ -1,0 +1,53 @@
+Aim: Write a program to solve a 0-1 Knapsack problem using dynamic programming or branch and bound strategy. 
+Objective: Students will learn 
+1. The basic concept of 0/1 Knapsack Problem 
+2. The basic concept of 0/1 Knapsack using Dynamic Programming and Branch and Bound Approach. 
+
+Theory: 
+Knapsack Problem: 
+Given a set of items, each with a weight and a value, determine a subset of items to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible. 
+Dynamic Programming Approach 
+Let i be the highest-numbered item in an optimal solution S for W dollars. Then S' = S - {i} is an optimal solution for W - wi dollars and the value to the solution S is Vi plus the value of the sub-problem. 
+We can express this fact in the following formula: define c[i, w] to be the solution for items 1,2, … , i and the maximum weight w. 
+The algorithm takes the following inputs 
+● The maximum weight W 
+● The number of items n 
+● The two sequences v = <v1, v2, …, vn> and w = <w1, w2, …, wn> 
+
+Algorithm 
+Dynamic-0-1-knapsack (v, w, n, W) 
+for w = 0 to W do 
+c[0, w] = 0 
+for i = 1 to n do 
+c[i, 0] = 0 
+for w = 1 to W do 
+if wi ≤ w then 
+if vi + c[i-1, w-wi] then 
+c[i, w] = vi + c[i-1, w-wi] 
+else c[i, w] = c[i-1, w] 
+else 
+c[i, w] = c[i-1 set of items to take can be deduced from the table, starting at c[n, w] and tracing backwards where the optimal values came from. 
+If c[i, w] = c[i-1, w], then item i is not part of the solution, and we continue tracing with c[i-1, w]. Otherwise, item i is part of the solution, and we continue tracing with c[i-1, w-W]. 
+Analysis 
+This algorithm takes θ(n, w) times as table c has (n + 1).(w + 1) entries, where each entry requires θ(1) time to compute. 
+Branch and Bound Approach: 
+Branch and bound is an algorithm design paradigm which is generally used for solving combinatorial optimization problems. These problems typically exponential in terms of time complexity and may require exploring all possible permutations in worst case. Branch and Bound solve these problems relatively quickly. 
+Let us consider below 0/1 Knapsack problem to understand Branch and Bound. Consider an example where n = 4, and the values are given by {10, 12, 12, 18}and the weights given by {2, 4, 6, 9}. The maximum weight is given by W = 15. Here, the solution to the problem will be including the first, third and the fourth objects. In solving this problem, we shall use the Least Cost- Branch and Bound method, since this shall help us eliminate exploring certain branches of the tree. We shall also be using the fixed-size solution here. Another thing to be noted here is that this problem is a maximization problem, whereas the Branch and Bound method is for minimization problems. Hence, the values will be multiplied by -1 so that this problem gets converted into a minimization problem. 
+Now, consider the 0/1 knapsack problem with n objects and total weight W. We define the upper bound(U) to be the summation of vixi (where vi denotes the value of that objects, and xi is a binary value, which indicates whether the object is to be included or not), such that the total weights of the included objects is less than W. The initial value of U is calculated at the initial position, where objects are added in order until the initial position is filled. 
+We define the cost function to be the summation of vifi, such that the total value is the maximum that can be obtained which is less than or equal to W. Here fi indicates the fraction of the object that is to be included. Although we use fractions here, it is not included in the final solution. 
+Here, the procedure to solve the problem is as follows are: 
+● Calculate the cost function and the Upper bound for the two children of each node. Here, the (i + 1)th level indicates whether the ith object is to be included or not. 
+● If the cost function for a given node is greater than the upper bound, then the node need not be explored further. Hence, we can kill this node. Otherwise, calculate the upper bound for this node. If this value is less than U, then replace the value of U with this value. Then, kill all unexplored nodes which have cost function greater than this value. 
+● The next node to be checked after reaching all nodes in a particular level will be the one with the least cost function value among the unexplored nodes. 
+
+● While including an object, one needs to check whether the adding the object crossed the threshold. If it does, one has reached the terminal point in that branch, and all the succeeding objects will not be included. 
+In this manner, we shall find a value of U at the end which eliminates all other possibilities. The path to this node will determine the solution to this problem. 
+
+Time and Space Complexity: 
+Even though this method is more efficient than the other solutions to this problem, its worst-case time complexity is still given by O(2n), in cases where the entire tree has to be explored. However, in its best case, only one path through the tree will have to explored, and hence its best-case time complexity is given by O(n). Since this method requires the creation of the state space tree, its space complexity will also be exponential. 
+Solving an Example: Consider the problem with n =4, V = {10, 10, 12, 18}, w = {2, 4, 6, 9} and W = 15. Here, we calculate the initial upper bound to be U = 10 + 10 + 12 = 32. Note that the 4th object cannot be included here, since that would exceed W. For the cost, we add 3/9 th of the final value, and hence the cost function is 38. Remember to negate the values after calculation before comparison. 
+After calculating the cost at each node, kill nodes that do not need exploring. Hence, the final state space tree will be as follows (Here, the number of the node denotes the order in which the state space tree was explored):
+Note here that node 3 and node 5 have been killed after updating U at node 7. Also, node 6 is not explored further, since adding any more weight exceeds the threshold. At the end, only nodes 6 and 8 remain. Since the value of U is less for node 8, we select this node. Hence the solution is {1, 1, 0, 1}, and we can see here that the total weight is exactly equal to the threshold value in this case. 
+
+Conclusion: We can solve 0/1 knapsack problem by using Dynamic Programming and Branch and Bound Approach.
+
