@@ -1,0 +1,30 @@
+Aim: Write a program to solve a fractional Knapsack problem using a greedy method. 
+
+Objective: Student will be able to learn 
+1. Concept of Knapsack Problem 
+2. Concept of implementation of Fractional Knapsack using Greedy Strategy. 
+
+Theory: 
+Given the weights and values of N items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack. In Fractional Knapsack, we can break items for maximizing the total value of the knapsack 
+Note: In the 0-1 Knapsack problem, we are not allowed to break items. We either take the whole item or don’t takes it. 
+An efficient solution is to use the Greedy approach. The basic idea of the greedy approach is to calculate the ratio value/weight for each item and sort the item on the basis of this ratio. Then take the item with the highest ratio and add them until we can ‘t adds the next item as a whole and at the end add the next item as much as we can which will always be the optimal solution to this problem. 
+
+Algorithm GreedyKnapsack(M,N) 
+//p[1:n] and w[1:n] contain the profits and weights respectively 
+//of the n objects ordered such that p[i]/w[i]>=p[i+1]/w[i+1] 
+//m is the knapsack size and x[1:n] is the solution vector. 
+{ for i:=1 to n do x[i]:=0.0; // initialize x 
+U:=m; 
+for i:=1 to n do 
+{ if (w[i]>U) then break; 
+x[i]:=1.0; 
+U=U-w[i]; 
+} if(i<=n) then x[i]:=U/w[i]; 
+} 
+Analysis: 
+The main time taking step is the sorting of all items in decreasing order of their profit/ weight ratio. 
+If the items are already arranged in the required order, then while loop takes O(n) time. 
+The average time complexity of Quick Sort is O(nlogn). 
+Therefore, total time taken including the sort is O(nlogn). 
+
+Conclusion: We have studied to implement fractional Knapsack using Greedy Strategy.
