@@ -1,0 +1,35 @@
+Aim: - Installation of Meta Mask and study spending Ether per transaction. 
+Objectives: Student will be able to learn 
+1. Concept of Meta mask 
+2. Installation and study of Meta mask and Ether 
+Theory: -
+ETAMASK 
+The existing browsers on our systems are centralized. In order to create a de-centralized system, we add a 
+plug-in called ―Metamask‖ 
+We need it because we need ―ether‖ (currency for blockchain) 
+Installed Metamask (Gives a virtual Ethereum wallet) 
+Created a simple smart contract through MetaMask (Using fake ether i.e currency of blockchain) 
+In-depth study of state-of-art on smart contract implementation. 
+REMIX IDE 
+Platform to create and deploy smart contract, supports solidity.
+SOLIDITY 
+A Language to create smart contracts, similar to JavaScript. reating a De-centralized platform for testing a 
+smart contract 
+Pre-requisites for creating a Block chain environment: 
+Adding Metamask extension to default browser Creating a wallet through test network Rinkeby. Currency 
+needed for block chain transaction – ether 
+Rinkeby gives this ether – 18.75 ethers / 3 days Smart contract in solidity language on IDE Remix Once you ‘ve completed the above steps, you ‘ll be able to access your new MetaMask wallet. There are two 
+main components you ‘ll need to familiarize yourself with so that you can begin using the software: 
+Identifying your public address: This is the address you can freely share with people or platforms like 
+exchanges in order to receive cryptocurrency into your wallet. Think of it as your home address that you 
+share with people to receive inbound mail. It’s always advisable, however, to check to make sure any 
+inbound tokens are compatible with MetaMask first before receiving them, otherwise, they might be lost 
+forever. 
+How to fund/buy and send: These are the core functions of MetaMask. You can locate your unique MetaMask public address by clicking the ―Account 1″ button (black arrow). 
+Finally, in order to begin interacting with any Ethereum platform, you ‘ll first need to fund your MetaMask 
+wallet with an amount of ether – the native cryptocurrency of Ethereum. All actions on the blockchain cost a 
+fee, whether that’s moving tokens from A to B or creating an NFT collection. This fee, known as a ―gas‖ 
+fee, is denominated in ether 
+How much you choose to fund your wallet depends on how much you intend to interact with various 
+platforms. For moderate use, $100 worth of ether is usually a good starting point to cover any initial fees. 
+Conclusion: We have successfully studied the installation of Metamask.
