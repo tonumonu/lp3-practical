@@ -1,0 +1,60 @@
+Aim: - Create your own wallet using Metamask for crypto transactions. 
+Objectives: Student will be able to learn 
+1. Concept of Meta mask 
+2. own wallet using Metamask for crypto transactions 
+Theory: -
+A Brief introduction to MetaMask 
+MetaMask is an open-source, straightforward, and easy-to-use cryptocurrency wallet. It functions as a web 
+browser extension available for Chrome, Firefox, Brave, or a mobile application for iOS or Android.
+Initially, this wallet supported only Ether and ERC-20 tokens, and now it is compatible with ERC-721 and 
+ERC-1155 token standards. Furthermore, MetaMask benefits include interaction with websites; hence, it can 
+function as a connection node for various DApps on Ethereum. 
+Adrian Devis and Dan Finlay are the MetaMask developers. Their idea was revolutionary and 
+straightforward; they intended to create a web browser extension that would allow managing cryptocurrency 
+and using the browser for fast and secure access with DApps. ConsenSys Software Inc. — a development 
+company, focusing on applications that use Ethereum ‘s blockchain, implemented the idea in 2016. 
+The solution used Ethereum ‘s interface and a web API called web3.js. This Ethereum library is the 
+fundament of MetaMask since it allows the browser to interact with the local or remote blockchain nodes via 
+HTTP, IPC, and WebSocket; also, it gained the ability to record and read data from smart contracts, transfer 
+tokens, etc. In another way, web3.js allowed the blockchain developers to create proxy and communication 
+bridges between MetaMask, DApps, and the user. 
+Adrian Devis and Dan Finlay admit that their idea was great. Yet, the technical implementation was super 
+complicated, especially in providing security for the users (web wallets are considered the most vulnerable 
+to hacker attacks). Nonetheless, ConsenSys succeeded, and on the 14th of July in 2016, they offered the first 
+version of MetaMask web browser cryptocurrency wallet for Chrome. Later, they presented a version for 
+Firefox, Brave, and other popular browsers. In 2019 they also launched the mobile version of the MetaMask 
+cryptocurrency wallet. 
+How does the MetaMask wallet function? 
+As we mentioned above, the MetaMask cryptocurrency wallet employs the web3.js library to function. This 
+library is a part of the official Ethereum product. The library was developed focusing on the requirements of 
+web applications that could interact with the Ethereum blockchain and take advantage of all blockchain ‘s 
+benefits and functions. MetaMask is a cryptocurrency wallet for Ethereum and an instrument that helps to 
+interact with DApps. MetaMask connects the extension to the DApp so that to fulfill both tasks. When the 
+application identifies the MetaMask, it creates a connection, and the user can start using all the features of a
+specific application.
+For instance, it can assets trading, access to resources or services, or any other task within the capability of a 
+DApp. Each action has its cost (transaction fee) that must be paid in Ethereum or any specified token. 
+MetaMask wallet has all instruments and protocols for this purpose. 
+Hence, we can state that Metamask also controls the interaction of the user and DApp, and processes the 
+operations required for specific actions, besides the function of a wallet. Reliable and secure cryptography 
+and safe internet connection are the environments for these operations. 
+Furthermore, MetaMask can generate asymmetric keys, store them on a local device, and manage access to 
+the keys. To sum up, MetaMask is a super-safe extension.
+Extended functions set for MetaMask clone 
+To help your MetaMask wallet clone become famous, you should add some advantages that highlight it 
+from the competitors and improve the user experience. 
+These can be the following: 
+Linking an account. Your users will find it useful to be able to buy a cryptocurrency and exchange it for 
+fiat within the wallet. This will be possible if you develop a wallet like MetaMask and add the feature of 
+linking bank accounts, credit/debit cards, PayPal, or other online payment systems. 
+eCommerce integrations. We mean integrating the wallet with exchanges, NFT marketplaces, 
+decentralized applications, shops, and other services that the users might find useful. 
+Multilingual interface. If you focus on a market where all people speak the same language, you might 
+neglect this aspect. However, your intentions are global, and you should add as many languages as possible 
+to increase the target audience. 
+Push notifications. The notifications will inform the users of receiving payments, ending transactions, rapid 
+exchange rate changes in the investment account, system updates, suspicious activity, etc. 
+VIP support. Numerous cryptocurrency trading platforms offer support for an additional fee. This may 
+include 24/7 support, communication with a personal specialist, etc. 
+QR scanner. This is another useful feature that allows your users to make payments even faster. Moreover, 
+it will decrease the number of transfers done by mistake
