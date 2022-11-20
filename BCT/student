@@ -1,0 +1,156 @@
+Write a program in solidity to create Student data. Use the following constructs: 
+Structures 
+Arrays 
+Fallback 
+Deploy this as smart contract on Ethereum and Observe the transaction fee and Gas values. 
+Objectives: 
+1. Concept of solidity 
+2. smart contract on Ethereum and Observe the transaction fee and Gas values 
+Theory: 
+Introduction 
+Blockchain is a decentralized, distributed public ledger that lets us collaborate and coordinate the members 
+that do not trust each other to make a secure transaction. Many of you understand blockchain as a bitcoin, 
+but bitcoin is a cryptocurrency that takes the help of blockchain technology to operate. 
+Blockchain Technology 
+First, when Windows was launched to create reports and work on any project, we used MS word, where 
+only one person could edit at a time and then send to another, and the process goes on, one after the other 
+method. After some technological evolution, we have seen Google docs, google sheets in the market where 
+online multiple people can work on a single document simultaneously. But the problem here is that it works 
+on centralized architecture where a single server maintains google docs and various nodes are connected. 
+Still, if the significant server crashes or gets corrupt, all the nodes get disconnected, and all the work gets 
+destroyed. So the solution to this is decentralized blockchain technology. Decentralized means that no single 
+server or single node is managing the network. Data is replicated to multiple nodes so that if any node goes 
+down, other nodes operate as it is, and original data can quickly be recovered. 
+What is Ethereum? 
+Ethereum is a decentralized blockchain designed to be highly secure, fault-tolerant, and programmable. 
+Ethereum blockchain is a choice for many developers and businesses. As said programmable, the main task 
+of Ethereum is to securely execute and verify the application code known as smart contracts. Ethereum helps 
+to build native scripting language(solidity) and EVM. Ethereum consensus mechanism is proof of work to 
+operate to verify the new transaction. Now we will learn about smart contracts and how it runs on the 
+Ethereum platform. 
+Overview of Smart Contracts 
+A smart contract is a small program that runs on an Ethereum blockchain. Once the smart contract is 
+deployed on the Ethereum blockchain, it cannot be changed. To deploy the smart contract to Ethereum, you 
+must pay the ether (ETH) cost. Understand it as a digital agreement that builds trust and allows both parties 
+to agree on a particular set of conditions that cannot be tampered with.
+To understand the need for a smart contract, suppose there was one grocery shop, and ram went to buy some 
+groceries. He purchased the groceries for 500 rupees and kept on debt that would pay the money next month 
+when he returned, so the shopkeeper jotted down his purchase in his ledger. In between the period somehow 
+shopkeeper changed 500 to 600 and when next month ram went to pay the money, the shopkeeper has 
+demanded 600 INR and ram has no proof to show that he has only bought 500 INR so in this case, smart 
+contracts play an essential role which prevents both the parties to tamper the agreement and only gets 
+terminate when all the conditions satisfy after the deal. There are a couple of languages to write smart 
+contracts, but the most popular is solidity. 
+Introduction to Solidity Programming 
+Solidity is object-oriented, high-level statically-typed programing language used to create smart contracts. 
+Solidity programming looks similar to Javascript, but there are a lot of differences between both languages. 
+In solidity, you need to compile the program first, while in Javascript, you can run the program directly in 
+your browser or by using Node JS. With solidity, you can create contracts for uses such as voting, 
+crowdfunding, blind auctions, and multi-signature wallets. It is also a case-sensitive programming language. 
+Visit the official solidity documentation to read more and be updated about any new functionality release. 
+What is Remix IDE? 
+It is an online IDE for creating solid, smart contracts, so you do not need to install or download anything to 
+do any setup. You can develop, deploy, and Administer your solidity smart contract using Remix IDE. Visit 
+this link to access the Remix IDE where you will find multiple options and a window shown below. The 
+window is a little bit similar to VS code where on the left-hand side, you will find some icons to terminate to 
+other options like a compiler, file explorer, search files, deploy, etc.Using the file explorer, you can create and open any file. We can set the compiler version, run our smart 
+contract, and observe the output using the compiler. Each compiler type provides a different amount of fake 
+ethers used for practicing purposes. Solidity Compilation Process Smart contract compilation is a critical 
+process to understand how a smart contract runs when created using solidity. We will understand the process 
+using the below flow chart. We can see that the smart contract written in solidity with sol extension first gets 
+the compiler version. After it goes under the compiler, It gets split into two parts where one is Byte code, 
+and the other is ABI (Abstract Binary Interface) key. Byte code is only executed and deployed on the 
+Ethereum blockchain, not the complete smart contract. Whenever any smart contract wants to communicate 
+with this smart contract, they need the ABI key to call functions and variables. 
+To observe how ABI and Byte code is generated on Remix IDE, visit IDE, open any contract in the 
+contracts folder, and compile and run it. Scroll down, and you will find two options: ABI and Byte code, 
+where you can copy and paste them into any notepad and observe how your code gets converted to Byte 
+code. 
+To create a smart contract, the first thing is to define the compiler version to use using the Pragma keyword 
+(you can also determine whether the program supports multiple versions or the version in a particular range); 
+after this, you define the contract using the contract keyword which is same as creating a class in objectoriented programming. 
+Important points related to smart contract Compilation 
+1. Contract Bytecode is public in readable form – It means It does not get encrypted because It will run on 
+different nodes of Ethereum. For then, It needs to decrypt again and again not to increase computation time. 
+It is kept in a readable form. 
+2. The contract doesn‘t have to be public – It does not need to keep contracts public, but most organizations 
+keep them public to maintain the trust. 
+3. Bytecode is immutable 
+4. ABI act as a bridge between application and smart contract 
+5. ABI and bytecode cannot be generated without source code 
+State and Local Variables in Solidity 
+Any variable declared on the contract level is known as a state variable. The critical property of the state 
+variable is that it is permanently stored in the blockchain, so you have to pay some amount of gas and use 
+the state variable with care. Solidity does not have a concept of Null or None; indeed, each data type has one 
+default value which on declaration is assigned to that variable. To define Public before any variable or 
+function, automatically, one get function is set with that variable, and you can access its value. Storage to 
+state variable is not dynamically allocated (To initialize state variable with the value, you need to assign a 
+value at declaration time, use constructor, use getter and setter functions). An instance of a contract variable 
+cannot have another state variable besides those already declared.Local variables are those variables that are 
+declared in the function body and are stored in a stack, not in contract storage. Local variables don‘t cost 
+gas; some types reference the storage by default. Memory keywords cannot be used at the contract level. 
+Functions in Solidity 
+Functions are an essential part of any programming language for the reusability of a particular code. We will 
+see the getter and setter function in solidity to learn how to create a function in solidity. The getter function 
+is a function from which we can access the value of our variables. It is a view-only function, so we can
+define it as a view or Pure, which states that the value of the state variable cannot be changed it returns the variable ‘s value, so we define the return type of value. On the other side, the setter function changes the 
+value, so it is a simple public function. 
+pragma solidity >= 0.5.0 < 0.9.0; 
+contract local { 
+uint age = 10; 
+function getter() public view returns(uint) { 
+return age; 
+} 
+function setter() public { 
+age = age + 1; 
+} 
+} 
+After writing the above code on Remix IDE in a new file with sol extension, you can compile the code, visit 
+the deploy section, and deploy the code to observe the deploy section output as shown below. The value will 
+increase as you click the setter and getter function buttons Pure and View in Solidity 
+We have seen that we use to view and pure where we are not updating the state variable. But pure, you 
+cannot use where it is also reading the state variable. Pure is used where both reading and writing are not 
+performed. Indeed, in View, reading is allowed, but writing is not permitted. When we do not define any one 
+of the following to a function, it simply warns that we can provide one restriction of pure or View to 
+function. 
+Constructor in Solidity 
+A constructor is a particular type of function which executes only once when you create your contract. 
+Constructor is used to work with state variables and define smart contract’s owners. You can create only one 
+constructor, and it is optional to create. The compiler creates a default constructor if there is no explicitly 
+defined constructor. 
+pragma solidity >= 0.5.0 < 0.9.0; 
+contract local { 
+uint public count; 
+constructor(uint new_count) { 
+count = new_count; 
+} }
+the above code, we have created a constructor, and before clicking on deploy, you need to define the value 
+of the constructor before it is called only once, so enter the value and click on deploy, and on scrolling, you 
+can observe the value of count. 
+Control Statements in Solidity 
+All programming languages have control statements that help us check multiple conditions using loops and 
+an if-else ladder, and solidity also supports loops and if-else statements. 
+Loops in Solidity 
+Solidity also supports three loops: a while loop, a Do while loop, and a loop. If you are familiar with any 
+other programming language, you must know about control statements and using loops to run particular 
+code multiple times with different values. In solidity, you cannot write the loops directly in contract storage; 
+instead, you must declare them in any function. 
+While the loop runs a code snippet multiple times until the condition is proper, the loop terminates when the 
+condition is false. In contrast, the loop runs 0 or multiple times. 
+Do while loop is a loop that runs even one time when the condition in the while loop is false. So it is used 
+when you need to run a particular code at least once and if certain conditions meet, then run it multiple 
+times. 
+For loop is a loop that is used when you know the start and end time of the loop and how many intervals you 
+need to take. For loop, the initialization and iterator updating are part of loop syntax. 
+So let us look after the syntax of each type of loop using a sample program. 
+pragma solidity >= 0.5.0 < 0.9.0; 
+contract Loops { 
+uint [3] public arr; 
+uint public count; 
+function Whileloop() public { 
+while(count < arr.length) { 
+arr[count] = count; 
+count++; 
+} } Conclusion: We have studied program writing in solidity to create Student data by using constructs like 
+structures, arrays, fallback and also deployed this as smart contract on Ethereum and Observe the transaction 
+fee and Gas values
